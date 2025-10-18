@@ -11,7 +11,7 @@ function App() {
           colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
           mouseForce={20}
           cursorSize={100}
-          isViscous={false}
+          isViscous={true}
           viscous={30}
           iterationsViscous={32}
           iterationsPoisson={32}
@@ -21,13 +21,20 @@ function App() {
           autoSpeed={0.5}
           autoIntensity={2.2}
           takeoverDuration={0.25}
-          autoResumeDelay={3000}
+          autoResumeDelay={1000}
           autoRampDuration={0.6}
         />
       </div>
 
       <main className="relative z-10 flex-1 flex items-center justify-center px-6 container max-w-3xl mx-auto font-mono">
         <div className="w-full">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-300"></span>
+            </span>
+            <span className="text-sm font-medium text-white/90">Coming Soon</span>
+          </div>
           <h1 className="text-4xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-tight flex flex-col sm:flex-row items-center gap-x-0 sm:gap-x-5 gap-y-2 sm:gap-y-0">
             <span>Refine to </span>
             <RotatingText
